@@ -97,11 +97,7 @@ pip install -r requirements.txt
 
 ### 3 - Run the Ingestion Process  
 
-* 3.1 - Go to the folder containing the ingestion process files:
-
-```
-cd fire_incident_ingestion
-```
+* 3.1 - Go to the folder containing the ingestion process files, `fire_incident_ingestion`
 
 * 3.2 - Use the SQL command in `create_raw_fire_incidents.sql` to create the table in the local PostgreSQL database
 
@@ -117,17 +113,21 @@ The process also accepts a second argument, `--ingestion-date`. This argument ca
 
 ### 4 - Run the Transformation Process
 
-* 4.1 - Go to the folder containing the transformation process files:
-
-```
-cd fire_incident_transformations
-```
+* 4.1 - Go to the folder containing the transformation process files, `fire_incident_transformations`
 
 * 4.2 - Run the dbt process with the command:
 
 ```
 dbt build
 ```
+
+At the end of the process, your local database will have those tables:
+
+![Final tables created](images/final_tables_created.png)
+
+And the end, the final `mart_fire_incidents` table will look like this:
+
+![mart_fire_incidents](images/mart_fire_incidents.png)
 
 # TODOs
 These are some changes and improvements planned for the future (since this is a practice project and not intended for production):
