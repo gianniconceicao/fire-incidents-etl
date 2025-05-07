@@ -6,7 +6,7 @@ fire_incidents_schema = StructType([
     StructField("Exposure Number", IntegerType(), True),
     StructField("ID", IntegerType(), True),
     StructField("Address", StringType(), True),
-    StructField("Incident Date", TimestampType(), True),
+    StructField("Incident Date", StringType(), True),
     StructField("Call Number", IntegerType(), True),
     StructField("Alarm DtTm", TimestampType(), True),
     StructField("Arrival DtTm", TimestampType(), True),

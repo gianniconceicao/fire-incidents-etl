@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: public
+    config:
+      enabled: true
+    tables:
+      - name: fire_incidents
