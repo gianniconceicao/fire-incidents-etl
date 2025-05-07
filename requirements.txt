@@ -1,0 +1,7 @@
+dotenv==0.9.9
+pyspark==3.5.5
+findspark==2.0.1
+sqlalchemy==2.0.31
+psycopg2-binary==2.9.9
+dbt-core==1.9.4
+dbt-postgres==1.9.0

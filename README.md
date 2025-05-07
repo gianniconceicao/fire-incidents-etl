@@ -19,3 +19,24 @@ docker run -d --name local-postgresdb-container -p 5432:5432 local-postgres-db
 ```
 
 5 - Database details:
+
+
+# Create a local environment:
+
+1 - 
+
+```
+python -m venv venv
+```
+
+2 - Activate (command for MacOS)
+
+```
+source venv/bin/activate
+```
+
+3 - Install the dependencies
+
+```
+pip install -r requirements.txt
+```
