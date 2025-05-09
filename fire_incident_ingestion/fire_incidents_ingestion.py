@@ -75,9 +75,7 @@ if __name__ == "__main__":
             df_renamed = df_renamed.filter(
                 F.col('incident_date') == F.to_date(F.lit(ingestion_date), "yyyy/MM/dd") 
             )
-        
-        print(df_renamed.count())
-        
+
         logger.info("Trasnformations completed, creating staging table for ingestion...")
         df_renamed.write \
             .format("jdbc") \
@@ -118,11 +116,11 @@ if __name__ == "__main__":
         logger.info("Process completed.")
 
     except Exception as e:
-        print("Erro durante o processo:", e)
+        logger.error("Error during the process:", e)
 
     finally:
         if 'cur' in locals():
             cur.close()
         if 'conn' in locals():
             conn.close()
-        print("Conexão encerrada com segurança.")
+        logger.error("Connection closed.")
